@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Project.MvpSite.Models;
+using MVP.Foundation.Multisite.Middleware;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
@@ -17,10 +18,8 @@ namespace Mvp.Project.MvpSite.Controllers
 
         }
 
-        // Inject Sitecore rendering middleware for this controller action
-        // (enables model binding to Sitecore objects such as Route,
-        // and causes requests to the Sitecore Layout Service for controller actions)
-        [UseSitecoreRendering]
+        // Injecting Custom Middleware that overrides Site based on Requested URL
+        [UseSitecoreRenderingAttribute(typeof(CustomRenderingEnginePipeline))]
         public IActionResult Index(Route route)
         {
             var request = HttpContext.GetSitecoreRenderingContext();

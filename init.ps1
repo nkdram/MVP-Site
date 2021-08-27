@@ -44,7 +44,7 @@ if (-not $SitecoreGallery) {
 }
 
 #Install and Import SitecoreDockerTools 
-$dockerToolsVersion = "10.1.4"
+$dockerToolsVersion = "10.0.5"
 Remove-Module SitecoreDockerTools -ErrorAction SilentlyContinue
 if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $dockerToolsVersion -ErrorAction SilentlyContinue)) {
     Write-Host "Installing SitecoreDockerTools..." -ForegroundColor Green
@@ -89,12 +89,14 @@ $cmHost = "mvp-cm.sc.localhost"
 $cdHost = "mvp-cd.sc.localhost" 
 $idHost = "mvp-id.sc.localhost"
 $renderingHost = "mvp.sc.localhost"
+$regionalRenderingHost = "regional-mvp.sc.localhost"
 
 Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $cmHost
 Add-HostsEntry $cdHost
 Add-HostsEntry $idHost
 Add-HostsEntry $renderingHost
+Add-HostsEntry $regionalRenderingHost
 
 #########################################################
 # Tell git to ignore changes to .env
@@ -120,6 +122,5 @@ Set-DockerComposeEnvFileVariable "SITECORE_ID_CERTIFICATE" -Value (Get-SitecoreC
 Set-DockerComposeEnvFileVariable "SITECORE_ID_CERTIFICATE_PASSWORD" -Value $idCertPassword
 Set-DockerComposeEnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
 Set-DockerComposeEnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
-Set-DockerComposeEnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
 
 Write-Host "Done!" -ForegroundColor Green

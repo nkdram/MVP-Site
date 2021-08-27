@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AssemblyName>MVP.Foundation.Multisite</AssemblyName>
+		<RootNamespace>MVP.Foundation.Multisite</RootNamespace>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Sitecore.LayoutService.Client" Version="14.0.1" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="14.0.1" />
+		<PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+	</ItemGroup>
+
+	
+
+</Project>

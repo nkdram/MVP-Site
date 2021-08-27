@@ -35,6 +35,10 @@
         "path": "/sitecore/content/MvpSite"
       },
       {
+        "name": "content-regional",
+        "path": "/sitecore/content/Regional-MvpSite"
+      },
+      {
         "name": "apikey",
         "path": "/sitecore/system/Settings/Services/API Keys/MvpSite"
       }

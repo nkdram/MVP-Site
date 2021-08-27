@@ -1,0 +1,30 @@
+﻿---
+ID: "1480e8c9-13a0-4332-b849-9ab373040399"
+Parent: "f0503706-7734-41c8-a999-7bf8a0660988"
+Template: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Path: "/sitecore/content/Regional-MvpSite/Shared Content/Announcements/MVP Summit"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200625T230912Z
+    - ID: "3192e490-54f8-4acd-902a-50992102646a"
+      Hint: AnnouncementText
+      Value: "<strong>Sitecore MVP Summit 2020</strong> is October 29-30! This year’s summit will be digital."
+    - ID: "89288dd4-7723-4262-a906-f67cedca28bb"
+      Hint: AnnouncementLink
+      Value: |
+        <link text="Stay informed" linktype="external" url="https://www.sitecore.com" anchor="" class="link-arrow" target="_blank" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d943dcc5-a03f-4590-98a3-ad06d15d71eb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200625T231021Z

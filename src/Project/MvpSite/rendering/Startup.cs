@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Localization;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.RenderingEngine.Localization;
 using Microsoft.AspNetCore.HttpOverrides;
+using MVP.Foundation.Multisite.Extensions;
 
 namespace Mvp.Project.MvpSite.Rendering
 {
@@ -54,8 +55,9 @@ namespace Mvp.Project.MvpSite.Rendering
                 .WithDefaultRequestOptions(request =>
                 {
                     request
-                        .SiteName(Configuration.DefaultSiteName)
-                        .ApiKey(Configuration.ApiKey);
+                        .SiteName(Configuration.DefaultSiteName) //register default site
+                        .ApiKey(Configuration.ApiKey)
+                        .Sites(Configuration.Sites); // register other sites
                 })
                 .AddHttpHandler("default", Configuration.LayoutServiceUri)
                 .AsDefaultHandler();
