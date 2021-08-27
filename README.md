@@ -28,6 +28,7 @@ The Sitecore MVP site is an Open Source project and as such we welcome community
      * mvp-cm.sc.localhost
      * mvp-id.sc.localhost
      * mvp.sc.localhost
+     * regional-mvp.sc.localhost
     
    * Required environment variable values in `.env` for the Sitecore instance
      * (Can be done once, then checked into source control.)
